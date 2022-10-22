@@ -8,6 +8,11 @@ function startPrediction(){
     let randomNumber = Math.floor(Math.random() * 8);
     let eightBall = "";
 
+     if (!userName) {
+        alert("Please enter your name.");
+    } else if (!userQuestion) {
+        alert("Please enter your question.");
+    } else {
     switch (randomNumber) {
     case 0:
         eightBall = "It is certain";
@@ -34,6 +39,7 @@ function startPrediction(){
         eightBall = "Signs point to yes";
         break;
     }
+}
     document.getElementById('resultDisplay').style.display ='block';
     document.getElementById('resultDisplay').innerHTML = `Hello, ${userName}!<br>${eightBall}.`;
     userName.innerHTML=" ";
