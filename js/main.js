@@ -39,11 +39,11 @@ function startPrediction(){
         eightBall = "Signs point to yes";
         break;
     }
-}
     document.getElementById('resultDisplay').style.display ='block';
     document.getElementById('resultDisplay').innerHTML = `Hello, ${userName}!<br>${eightBall}.`;
     userName.innerHTML=" ";
     userQuestion.innerHTML=" ";
     document.getElementById('askQuestion').innerHTML = 'ASK ANOTHER QUESTION?'
-
+}
+   
 }
