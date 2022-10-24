@@ -41,9 +41,15 @@ function startPrediction(){
     }
     document.getElementById('resultDisplay').style.display ='block';
     document.getElementById('resultDisplay').innerHTML = `Hello, ${userName}!<br>${eightBall}.`;
-    userName.innerHTML=" ";
-    userQuestion.innerHTML=" ";
-    document.getElementById('askQuestion').innerHTML = 'ASK ANOTHER QUESTION?'
+    document.getElementById('askQuestion').innerHTML = 'ASK ANOTHER QUESTION?';
+    document.getElementById('askQuestion').onclick = clearFields;
+
 }
    
+}
+
+function clearFields(){
+    userName.innerHTML="";
+    userQuestion.innerHTML=""
+    document.getElementById('askQuestion').innerHTML = 'ASK'
 }
