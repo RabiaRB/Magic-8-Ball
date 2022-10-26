@@ -50,7 +50,7 @@ function startPrediction(){
 
 function clearFields(){
     document.getElementById("userInput").reset();
-       document.getElementById('resultDisplay').style.display = 'none';
+    document.getElementById('resultDisplay').style.display = 'none';
     document.getElementById('askQuestion').innerHTML = 'ASK';
     document.getElementById('askQuestion').onclick = startPrediction;
 }
