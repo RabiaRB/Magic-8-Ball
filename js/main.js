@@ -1,5 +1,60 @@
+const options = [
+    "Will I get a promotion at work?",
+    "Should I pursue a new career path?",
+    "Will I meet my soulmate soon?",
+    "Is it a good time to invest in the stock market?",
+    "Will I pass my upcoming exam?",
+    "Should I go on a vacation this year?",
+    "Will I be successful in my new business venture?",
+    "Is there a major change coming in my life?",
+    "Should I buy a new car?",
+    "Will I receive a financial windfall in the near future?",
+    "Is it a good idea to move to a new city?",
+    "Will my health improve?",
+    "Should I confront a friend about an issue?",
+    "Will I win the lottery?",
+    "Is it a good time to sell my house?",
+    "Will I be able to pay off my debts?",
+    "Should I take a risk in my personal life?",
+    "Will I achieve my goals this year?",
+    "Is someone trustworthy in my life?",
+    "Should I start a new creative project?",
+]
 
 
+const input = document.getElementById('userQuestion');
+const list = document.getElementById('autocomplete-list');
+
+input.addEventListener('input', handleInput);
+input.addEventListener('focus', handleInput);
+list.addEventListener('click', handleItemClick);
+
+function handleInput() {
+  const searchText = input.value.toLowerCase();
+  const matchedOptions = options.filter(option =>
+    option.toLowerCase().startsWith(searchText)
+  );
+  renderOptions(matchedOptions);
+}
+
+function handleItemClick(event) {
+  const selectedOption = event.target.innerText;
+  input.value = selectedOption;
+  list.innerHTML = '';
+}
+
+function renderOptions(matchedOptions) {
+  if (matchedOptions.length === 0) {
+    list.innerHTML = '';
+    return;
+  }
+
+  const html = matchedOptions
+    .map(option => `<li>${option}</li>`)
+    .join('');
+
+  list.innerHTML = html;
+}
 document.getElementById('askQuestion').onclick = startPrediction;
 
 function startPrediction(){
