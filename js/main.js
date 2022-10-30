@@ -55,6 +55,15 @@ function renderOptions(matchedOptions) {
 
   list.innerHTML = html;
 }
+
+
+document.getElementById('userName').addEventListener('input', function(event) {
+    var userName = event.target.value;
+
+    // Store the input value in local storage
+    localStorage.setItem('userName', userName);
+});
+
 document.getElementById('askQuestion').onclick = startPrediction;
 
 function startPrediction(){
@@ -106,6 +115,38 @@ function startPrediction(){
 function clearFields(){
     document.getElementById("userInput").reset();
     document.getElementById('resultDisplay').style.display = 'none';
+        // Get the stored value from local storage
+    var storedValue = localStorage.getItem('userName');
+
+    // Set the value of the input element
+    document.getElementById('userName').value = storedValue;
+
     document.getElementById('askQuestion').innerHTML = 'ASK';
     document.getElementById('askQuestion').onclick = startPrediction;
 }
+
+
+// // if (!localStorage.getItem('userName')){
+// //     localStorage.setItem('userName', document.getElementById('userName').value)
+// // }
+
+// document.querySelector('#askQuestion').addEventListener('click', addName);
+
+// function addName() {
+//     let nameStorage = [];
+//         nameStorage.push(document.getElementById('userName').value)
+
+//         localStorage.setItem('userName', nameStorage)
+    
+// }
+
+// // localStorage.getItem('userName')
+
+
+window.addEventListener('load', function() {
+    // Get the stored value from local storage
+    var storedValue = localStorage.getItem('userName');
+
+    // Set the value of the input element
+    document.getElementById('userName').value = storedValue;
+});
