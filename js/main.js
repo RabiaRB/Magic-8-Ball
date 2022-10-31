@@ -126,27 +126,3 @@ function clearFields(){
 }
 
 
-// // if (!localStorage.getItem('userName')){
-// //     localStorage.setItem('userName', document.getElementById('userName').value)
-// // }
-
-// document.querySelector('#askQuestion').addEventListener('click', addName);
-
-// function addName() {
-//     let nameStorage = [];
-//         nameStorage.push(document.getElementById('userName').value)
-
-//         localStorage.setItem('userName', nameStorage)
-    
-// }
-
-// // localStorage.getItem('userName')
-
-
-window.addEventListener('load', function() {
-    // Get the stored value from local storage
-    var storedValue = localStorage.getItem('userName');
-
-    // Set the value of the input element
-    document.getElementById('userName').value = storedValue;
-});
