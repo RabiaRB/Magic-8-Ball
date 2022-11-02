@@ -34,7 +34,9 @@ body {
  
 
 }
-
+h1{
+     text-align: center;
+}
 #userInput{
      display: flex;
      flex-direction: column;
