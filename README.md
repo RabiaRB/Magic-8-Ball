@@ -7,10 +7,10 @@ Ask questions and let the Magic 8 Ball answer.
 
 ## Desktop View
 
-<img src="./_Users_biya._Desktop_Live%20Projects_Magic%20Eight%20Ball_index.html.png" width="300px">
+<img src="/ask-the-magic-8-ball.netlify.app_.png" width="300px">
 
 ## Mobile View
-<img src="./_Users_biya._Desktop_Live%20Projects_Magic%20Eight%20Ball_index.html(iPhone 12 Pro).png" width="300px">
+<img src="/ask-the-magic-8-ball.netlify.app_(iPhone 12 Pro).png" width="300px">
 
 ## Working
 
